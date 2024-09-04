@@ -29,3 +29,10 @@ body{
     box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
     cursor: pointer;
 }
+
+#final-message{
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin-top: 100px;
+}
