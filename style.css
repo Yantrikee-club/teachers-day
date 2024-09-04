@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+.paper{
+    padding: 100px 100px;
+}
+
+body{
+    background-color: white;
+    height: 100vh;
+    background-image: url('images/Final\ Background.png');
+    background-size: 1500px;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paper{
+    font-family: 'zeyada';
+    font-size: 50px;
+    font-weight: 600;
+    position: absolute;
+    color: rgb(58, 58, 58);
+    background-image: url('images/paper.webp');
+    background-size: 500px;
+    background-position: center center;
+    padding: 20px 100px;
+    transform: rotateZ(-5deg);
+    box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
