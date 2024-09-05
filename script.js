@@ -67,7 +67,6 @@ nextButtons.forEach((button, index) => {
         if (document.querySelectorAll('.paper').length === 0) {
             // Show the final message or perform any other action
             const lastMessage = document.getElementById('last-message');
-            lastMessage.style.display = 'block';
             lastMessage.classList.add('expanded');
         }
     });
@@ -77,3 +76,10 @@ papers.forEach(paper => {
     const p = new Paper();
     p.init(paper);
 })
+
+// Pre loader
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        document.querySelector("body").classList.add("loaded");
+    }, 1000)
+  });
