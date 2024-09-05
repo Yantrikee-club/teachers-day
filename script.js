@@ -48,6 +48,30 @@ class Paper {
 }
 
 const papers = document.querySelectorAll('.paper');
+const next = document.getElementById('next');
+
+const nextButtons = document.querySelectorAll('.next');
+
+nextButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        const currentPaper = button.closest('.paper');
+        currentPaper.style.transform = 'translateX(-300%)';
+        currentPaper.style.transition = 'transform 0.5s ease-in-out';
+
+        // Remove the current paper after sliding away
+        setTimeout(() => {
+            currentPaper.remove();
+        }, 500);
+
+        // Check if all papers have been shown
+        if (document.querySelectorAll('.paper').length === 0) {
+            // Show the final message or perform any other action
+            const lastMessage = document.getElementById('last-message');
+            lastMessage.style.display = 'block';
+            lastMessage.classList.add('expanded');
+        }
+    });
+});
 
 papers.forEach(paper => {
     const p = new Paper();
